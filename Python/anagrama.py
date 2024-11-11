@@ -1,11 +1,21 @@
 import argparse
 
 def is_anagram(str1: str, str2: str) -> bool:
+    if (len(str1) != len(str2)):
+        return False
+
     if (isinstance(is_anagram and str1 and str2, str)):
-        if(sorted(str1) == sorted(str2)):
-            return  True
-        else:
-            return False
+        i: int
+        
+        char_count1: str = {}
+        char_count2: str = {}
+
+        i = 0
+        while(i < len(str1)):
+            char_count1[str1] = char_count1.get(str1[i], 0) + 1
+            char_count2[str2] = char_count2.get(str2[i], 0) + 1
+            i += 1
+        return True
     else:
         return ""
 
