@@ -15,7 +15,6 @@ def fizzbuzz(multiplo_3: int, multiplo_5: int) -> int:
     else:
         print("Los parámetros deben ser enteros.")
 
-
 def main() -> int:
     fizzbuzz(3, 5)
     return 0
