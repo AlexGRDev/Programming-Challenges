@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void print_number(int i) 
+void print_number(int i)
 {
     if (i > 9)
     {
@@ -10,22 +10,22 @@ void print_number(int i)
     write(1, &c, 1);
 }
 
-void fizzbuzz(void)
+int fizzbuzz(int multiplo_3, int multiplo_5)
 {
     int i;
 
     i = 1;
     while (i <= 100)
     {
-        if(i % 3 == 0 && i % 5 == 0)
+        if (i % multiplo_3 == 0 && i % multiplo_5 == 0)
         {
             write(1, "fizzbuzz\n", 10);
         }
-        else if(i % 3 == 0)
+        else if (i % multiplo_3 == 0)
         {
             write(1, "fizz\n", 6);
         }
-        else if(i % 5 == 0)
+        else if (i % multiplo_5 == 0)
         {
             write(1, "buzz\n", 6);
         }
@@ -36,11 +36,12 @@ void fizzbuzz(void)
         }
         i++;
     }
-    
+
+    return i;
 }
 
-int  main(void)
+int main(void)
 {
-    fizzbuzz();
-    return(0);
+    fizzbuzz(3, 5);
+    return 0;
 }

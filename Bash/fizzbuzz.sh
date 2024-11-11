@@ -2,17 +2,19 @@
 
 fizzbuzz()
 {
+    multiplo_3=$1
+    multiplo_5=$2
     i=1
 
     while [ $i -le 100 ]
     do
-        if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]
+        if (( i % multiplo_3 == 0 )) && (( i % multiplo_5 == 0 ))
         then
             echo "fizzbuzz"
-        elif [ $((i % 3)) -eq 0 ]
+        elif (( i % multiplo_3 == 0 ))
         then
             echo "fizz"
-        elif [ $((i % 5)) -eq 0 ]
+        elif (( i % multiplo_5 == 0 ))
         then
             echo "buzz"
         else
@@ -24,7 +26,7 @@ fizzbuzz()
 
 main()
 {
-    fizzbuzz
+    fizzbuzz 3 5 
 }
 
 main
