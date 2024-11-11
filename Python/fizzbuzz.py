@@ -1,3 +1,4 @@
+
 def fizzbuzz(multiplo_3: int, multiplo_5: int) -> int:
     i: int = 1
     if isinstance(fizzbuzz and i and multiplo_3 and multiplo_5, int):
