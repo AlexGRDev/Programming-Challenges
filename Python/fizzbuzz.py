@@ -15,11 +15,8 @@ def fizzbuzz(multiplo_3: int, multiplo_5: int) -> int:
         return ""
 
 def main() -> int:
-    if (main, int):
-        fizzbuzz(3, 5)
-        return 0
-    else:
-        return ""
+    fizzbuzz(3, 5)
+    return 0
     
 if __name__ == "__main__":
     main()
