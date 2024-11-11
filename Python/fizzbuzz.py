@@ -20,6 +20,5 @@ def main() -> int:
     fizzbuzz(3, 5)
     return 0
 
-
 if __name__ == "__main__":
     main()
