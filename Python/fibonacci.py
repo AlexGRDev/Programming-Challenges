@@ -1,21 +1,18 @@
 def fibonacci(a: int, b: int) -> int:
-    if (isinstance(a and b, int)) or a < 0 or b < 0:
-        i: int
-        a: int
-        b: int
+    if not (isinstance(a, int) and isinstance(b, int)):
+        return (-1)
 
-        i = 0
-        while i < 50:
-            print(a)
-            a, b = b, a + b
-            i += 1
-        return a
-    else:
-        return ""
+    counter: int
 
-def main() -> int:
+    counter = 0
+    while counter <= 50:
+        print(a)
+        a, b = b, a + b
+        counter += 1
+    return (a) 
+
+def main() -> None:
     print(fibonacci(0, 1))
-    return 0
 
 if __name__ == "__main__":
     main()

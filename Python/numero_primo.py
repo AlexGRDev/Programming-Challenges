@@ -3,7 +3,7 @@ import argparse
 def is_primo(n: int) -> bool:
     if n <= 1:
         return False
-    
+    1
     if(isinstance(n, int)):
         i: int
 
@@ -14,7 +14,7 @@ def is_primo(n: int) -> bool:
             i += 1
         return True
     else:
-        return ""
+        return False
 
 def main() -> int:
     parser = argparse.ArgumentParser()
