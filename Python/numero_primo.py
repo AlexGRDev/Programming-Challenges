@@ -1,20 +1,17 @@
 import argparse
 
 def is_primo(n: int) -> bool:
-    if n <= 1:
-        return False
-    1
-    if(isinstance(n, int)):
-        i: int
-
-        i = n
+    if (n <= 1):
+        return (False)
+    if (isinstance(n, int)):
+        i = 2
         while (i * i <= n):
-            if (n % i == 0):
-                return False
-            i += 1
-        return True
+            if (n % i == 0):  
+                return (False)
+            i += 1  
+        return (True) 
     else:
-        return False
+        return (False)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -23,12 +20,12 @@ def main() -> int:
     
     n = args.n
 
-    if is_primo(n):
+    if (is_primo(n)):
         print(f"'{n}' es primo")
     else:
         print(f"'{n}' NO es primo.")
     
-    return 0
+    return (0)
 
 if __name__ == "__main__":
     main()

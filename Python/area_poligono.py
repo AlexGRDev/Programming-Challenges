@@ -5,31 +5,39 @@ RECTANGULO: str = "RECTANGULO"
 TRIANGULO: str = "TRIANGULO"
 
 def area_poligono(figure: str, a: float, b: float) -> float:
-    if (figure not in [CUADRADO, RECTANGULO, TRIANGULO]):
+    if not(figure in [CUADRADO, RECTANGULO, TRIANGULO]):
         return (1)
     
-    if not (isinstance(a, (float, int)) or (b is not None and not isinstance(b, (float, int)))):
-        return print("Los valores de a y b deben ser números")
+    elif not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+        return (1)
     
-    if (figure == TRIANGULO):
+    elif (figure == TRIANGULO):
         return (a * b) / 2
     elif (figure == RECTANGULO):
         return a * b
     elif (figure == CUADRADO):
         return a * a
-    else:
-        return (1)
+    return (0)
 
-def main() -> None:
+def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('figure', type=str)
     parser.add_argument('a', type=float)
     parser.add_argument('b', type=float)
     args = parser.parse_args()
+    
+    area = area_poligono(args.figure.upper(), args.a, args.b)
+   
+    if not (isinstance(args.figure.upper(), str) and isinstance(args.a, float) and isinstance(args.b, float)):
+        return(1)
+    elif (area == 1):
+        print(f'Error en los parámetros proporcionados.')
+        return(1)
+    elif (area != 0): 
+        print(f'La área de {args.figure} es {round(area, 2)}')
+    else:
+        print(f'Error al calcular el área.')
+    return(0)
 
-    try:
-        print("".join({args.figure.upper()}), area_poligono(args.figure.upper(), args.a, args.b))
-    except ValueError as e:
-        print(f"Error: {e}")
 if __name__ == "__main__":
     main()

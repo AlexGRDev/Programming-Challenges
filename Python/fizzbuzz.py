@@ -16,8 +16,8 @@ def fizzbuzz(multiplo_3: int, multiplo_5: int) -> int:
         numero += 1
     return (0)
 
-def main() -> None:
+def main() -> int:
     fizzbuzz(3, 5)
-
+    return (0)
 if __name__ == "__main__":
     main()

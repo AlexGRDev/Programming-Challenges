@@ -9,9 +9,9 @@ def fibonacci(a: int, b: int) -> int:
         counter += 1
     return (a)
 
-def main() -> None:
+def main() -> int:
     print(fibonacci(0, 1))
-    return (None)
+    return (0)
 
 if __name__ == "__main__":
     main()
