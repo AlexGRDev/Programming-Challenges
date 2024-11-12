@@ -7,11 +7,11 @@ def fibonacci(a: int, b: int) -> int:
         print(a)
         a, b = b, a + b
         counter += 1
-    
     return (a)
 
 def main() -> None:
     print(fibonacci(0, 1))
+    return (None)
 
 if __name__ == "__main__":
     main()
