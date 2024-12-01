@@ -3,7 +3,6 @@
 // Aritmetico, lógicos, comparativos, asignación, identidad, pertenencia, bits.
 
 #include <stdio.h>
-#include <conio.h>
 
 int main(){
     // Ejemplos de operadores de asignación
@@ -31,7 +30,7 @@ int main(){
     printf("operador Resta: 3 - 2 = %d.\n", 3 - 2);
     printf("operador Multiplicacion: 10 * 5 = %d.\n", 10 * 5);
     printf("operador Division: 24 / 6 = %d.\n", 24 / 6);
-    printf("operador  Modulo: 30 % 11 = %d.\n", 30 % 11);
+    printf("operador  Modulo: 30,11 = %d.\n", 30 % 11);
 
     // Ejemplos de operadores relacionales
     printf("\nOperadores relacionales\n");
@@ -106,6 +105,5 @@ int main(){
         if(i!=16 && i%2 ==0 && i%3 != 0)
             printf("%d ",i);
     
-    getch();
     return 0;
 }
