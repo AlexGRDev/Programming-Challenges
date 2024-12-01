@@ -2,6 +2,7 @@
 // Ejercicio crea ehemplos utilizando los tipos de operadores en tu lenguaje
 // Aritmetico, lógicos, comparativos, asignación, identidad, pertenencia, bits.
 
+// importando librerias
 #include <stdio.h>
 
 int main(){
