@@ -17,15 +17,13 @@ bool anagram(char *word1, char *word2)
     if (strcmp(word1, word2) == 0)
     {
         return false;
-    }
-
-    if (strlen(word1) != strlen(word2))
+    } if (strlen(word1) != strlen(word2))
     {
         return false;
     }
 
     int char_counter[256];
-    int i, j;
+    int i;
 
     i = 0;
     while (i < 256)
@@ -35,20 +33,19 @@ bool anagram(char *word1, char *word2)
         if (word1[i] != '\0')
         {
             char_counter[(unsigned char)(word1[i])]++;
-        }
+        } 
+        
+        int j;
+        
         j = 0;
         while (j < i)
         {
             if (char_counter[j] != 0)
             {
                 char_counter[(unsigned char)(word2[j])]++;
-            }
-            j++;
-        }
-        i++;
-    }
-
-    return true;
+            } j++;
+        } i++;
+    } return true;
 }
 
 int main() 
@@ -59,10 +56,8 @@ int main()
     if (anagram(word1, word2))
     {
         printf("Las palabras son anagramas\n");
-    } 
-    else
+    } else
     {
         printf("Las palabras no son anagramas\n");
-    }
-    return 0;
+    } return 0;
 }
