@@ -9,24 +9,18 @@
 
 #include <stdio.h>
 
-void fizzbuzz(int *num) 
+int fizzbuzz(int *num) 
 {
     if (*num % 3 == 0 && *num % 5 == 0) 
     {
         printf("fizzbuzz\n");
-    }
-    else if (*num % 3 == 0)
+    } else if (*num % 3 == 0)
     {
         printf("fizz\n");
-    }
-    else if (*num % 5 == 0)
+    } else if (*num % 5 == 0)
     {
         printf("buzz\n");
-    } 
-    else 
-    {
-        printf("%d\n", *num);
-    }
+    } return printf("%d\n", *num);
 }
 
 int main() 
@@ -40,6 +34,5 @@ int main()
     {
         fizzbuzz(&i);
         (*ptrI)++;
-    }
-    return 0;
+    } return 0;
 }
