@@ -10,13 +10,14 @@ bool es_primo(int *n)
 {
     if (*n <= 1) return false;
 
-    int i = 2;
+    int i;
+    
+    i = 2;
     while (i <= *n / 2)
     {
         if (*n % i == 0) return false;
         i++;
-    }
-    return true;
+    } return true;
 }
 
 int main()
@@ -30,10 +31,8 @@ int main()
         if (es_primo(&i))
         {
             printf("%d\n", *ptrI);
-        }
-        (*ptrI)++;
-    }
-    return 0;
+        } (*ptrI)++;
+    } return 0;
 }
 
     
