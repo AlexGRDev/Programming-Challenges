@@ -16,16 +16,13 @@ int fibonacci(int *num)
     if (*num == 0) 
     {
         return 0;
-    } 
-    else if (*num == 1) 
+    } else if (*num == 1) 
     {
         return 1;
-    } 
-    else if (memo[*num] != 0) 
+    } else if (memo[*num] != 0) 
     {
         return memo[*num];
-    } 
-    else 
+    } else 
     {
         int n1 = *num - 1;
         int n2 = *num - 2;
@@ -46,6 +43,5 @@ int main()
     {
         printf("fibonacci(%d) %d\n", *ptrI, fibonacci(&i));
         (*ptrI)++;
-    }
-    return 0;
+    } return 0;
 }
